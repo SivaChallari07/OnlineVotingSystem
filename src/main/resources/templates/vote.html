@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cast Your Vote</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Cast Your Vote</h2>
+
+    <form action="#" th:action="@{/vote/cast}" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" th:value="${username}" readonly>
+        </div>
+
+        <div>
+            <label for="candidate">Select Candidate:</label>
+            <select id="candidate" name="candidateId" required>
+                <option th:each="candidate : ${candidates}" th:value="${candidate.id}" th:text="${candidate.name}"></option>
+            </select>
+        </div>
+
+        <div>
+            <button type="submit">Submit Vote</button>
+        </div>
+    </form>
+
+</body>
+</html>

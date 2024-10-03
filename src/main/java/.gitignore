@@ -1,0 +1,17 @@
+# Ignore IDE project files
+/.idea
+*.iml
+*.class
+
+# Ignore OS files
+.DS_Store
+
+# Ignore logs
+*.log
+
+# Ignore compiled files
+/target
+
+# Ignore application configuration
+/application.properties
+/application.yml
